@@ -34,4 +34,4 @@ A docker hosted Apache Superset data visualisation tool was connected to the Pos
 
 
 ### Presentation PDF
-https://github.com/RBiswa787/airbus-aerothonv5/tree/main/assets/Team_Aviators-Airbus_Aerothon 5.0.pdf
+https://github.com/RBiswa787/airbus-aerothonv5/tree/main/assets/Team_Aviators-Airbus_Aerothon5_0.pdf
