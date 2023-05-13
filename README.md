@@ -16,7 +16,7 @@ To design a Data Lake based architecture for a washing machine manufacturing ind
 
 ### Architecture 
 <br>
-![alt text](https://github.com/RBiswa787/airbus-aerothonv5/blob/main/assets/archi.png?raw=true)
+<img src="https://github.com/RBiswa787/airbus-aerothonv5/blob/main/assets/archi.png"/>
 <br>
 
 ### Explanation
