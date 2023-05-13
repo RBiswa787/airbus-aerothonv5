@@ -16,7 +16,7 @@ To design a Data Lake based architecture for a washing machine manufacturing ind
 
 ### Architecture 
 <br>
-![alt text](https://github.com/RBiswa787/airbus-aerothonv5/blob/main/archi.png?raw=true)
+![alt text](https://github.com/RBiswa787/airbus-aerothonv5/blob/main/assets/archi.png?raw=true)
 <br>
 
 ### Explanation
@@ -34,4 +34,4 @@ A docker hosted Apache Superset data visualisation tool was connected to the Pos
 
 
 ### Presentation PDF
-[https://github.com/RBiswa787/airbus-aerothonv5/tree/main/assets/Team Aviators-Airbus Aerothon 5.0.pdf](https://github.com/RBiswa787/airbus-aerothonv5/tree/main/assets/Team Aviators-Airbus Aerothon 5.0.pdf)
+https://github.com/RBiswa787/airbus-aerothonv5/tree/main/assets/Team Aviators-Airbus Aerothon 5.0.pdf
