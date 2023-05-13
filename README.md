@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Team Aviators
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Theme
+To design a Data Lake based architecture for a washing machine manufacturing industry use-case.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Our Solution
+### Tech Stack
+* ReactJS
+* Flask API
+* PostgreSQL
+* Airbyte 
+* dbt core
+* Apache Superset
+* Docker
 
-### `npm start`
+### Architecture 
+<br>
+![alt text](https://github.com/RBiswa787/airbus-aerothonv5/blob/main/archi.png?raw=true)
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Explanation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Different departments can upload CSV files containing department specific data via ReactJS based frontend.
+JWT token based authentication is implemented to restrict access to data upload platform.
+A python script running in the Flask based backend converts received CSV to DataFrame, connects to PostgreSQL service running on Docker container and writes to it.
 
-### `npm test`
+This acts as our primary data storage. Next we used self-hosted Airbyte ELT tool to extract data from PostgreSQL primary DB to destination PostgreSQL DB acting as datalake. Cron jobs are configured in Airbyte to periodically sync the two databases making it near real time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+DBT or Data Build Tool can be used to apply relevant transformation to the data loaded in data lake such as normalisation and redundancy removal, merges etc..
+Using an ELT pipeline instead of ELT avoids writing corrupt data to data lake in case of transformation failures.
 
-### `npm run build`
+A docker hosted Apache Superset data visualisation tool was connected to the PostgreSQL datalake. The same can be used to generate dashboards and interactive charts for monitoring and forecast purpose.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Presentation PDF
+[https://github.com/RBiswa787/airbus-aerothonv5/tree/main/assets/Team Aviators-Airbus Aerothon 5.0.pdf](https://github.com/RBiswa787/airbus-aerothonv5/tree/main/assets/Team Aviators-Airbus Aerothon 5.0.pdf)
